@@ -1,4 +1,6 @@
-// TODO: domain set up, css changes, how to plan for next trip if time is negative?
+// TODO: how to plan for next trip if time is negative?
+
+$(".test").html("replacing test here")
 
 var nextDate = new Date('01-29-2022');
 nextDate = new Date(nextDate.getTime() - (nextDate.getTimezoneOffset() * 60 * 1000))
