@@ -53,8 +53,8 @@ createFlowers();
 setInterval(() => { createFlowers() }, 3000);
 
 var today = new Date();
-const offset = today.getTimezoneOffset()
-today = new Date(today.getTime() - (offset*60*1000))
+console.log('Next date: %s', nextDate.toString());
+console.log('Current date: %s', today.toString());
 var secondsDiff = (nextDate.getTime() - today.getTime()) / 1000;
 
 function getMinMetric() {
@@ -88,7 +88,11 @@ if (nextDate.toISOString().split('T')[0] === today.toISOString().split('T')[0]) 
     if (numberOfTimes === null || metric === null) {
         document.getElementById('metric').innerHTML = 'Only ' + secondsDiff + ' seconds!';
     } else { 
-        console.log('More like %s times...', numberOfTimes);
+        var total_s = numberOfTimes * metric['duration_s'];
+        console.log('More like %s times to be exact...', numberOfTimes);
+        console.log('Seconds: %s', total_s); 
+        console.log('Hours: %s', total_s/60/60); 
+        console.log('Days: %s', total_s/60/60/24); 
         var copy = metric['copy'] + ' ' + Math.round(numberOfTimes) + ' ' + 'times!';
         document.getElementById('metric').innerHTML = copy;
     }
