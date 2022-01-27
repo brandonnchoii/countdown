@@ -2,7 +2,7 @@
 
 var nextDate = new Date('01-29-2022');
 nextDate = new Date(nextDate.getTime() - (nextDate.getTimezoneOffset() * 60 * 1000))
-document.getElementById('countdown').innerHTML = "&#128197 " + nextDate.toISOString().split('T')[0] + " &#128302"; 
+$("#countdown").html("&#128197 " + nextDate.toISOString().split('T')[0] + " &#128302"); 
 
 var metricOptions = [
     // paddington
