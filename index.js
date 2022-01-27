@@ -38,7 +38,7 @@ var metricOptions = [
 ];
 
 function createFlowers() {
-    let flowers = [
+    var flowers = [
         "127799", //tulip
         "127801", //rose
         "127803", //sunflower
@@ -56,13 +56,13 @@ setInterval(() => { createFlowers() }, 3000);
 var today = new Date();
 const offset = today.getTimezoneOffset()
 today = new Date(today.getTime() - (offset*60*1000))
-let secondsDiff = (nextDate.getTime() - today.getTime()) / 1000;
+var secondsDiff = (nextDate.getTime() - today.getTime()) / 1000;
 
 function getMinMetric() {
     // only allow whole numbers
     var validMetrics = [];
     metricOptions.forEach(metric => {
-        let numberOfTimes = secondsDiff / metric['duration_s'];
+        var numberOfTimes = secondsDiff / metric['duration_s'];
         if (numberOfTimes >= 1) {
             validMetrics.push([numberOfTimes, metric]);
         }
@@ -79,15 +79,15 @@ function getMinMetric() {
 if (secondsDiff <= 0) {
     document.getElementById('metric').innerHTML = "OMG! That's TODAY!~";
 } else {
-    let metricInfo = getMinMetric();
-    let numberOfTimes = metricInfo[0];
-    let metric = metricInfo[1];
+    var metricInfo = getMinMetric();
+    var numberOfTimes = metricInfo[0];
+    var metric = metricInfo[1];
 
     if (numberOfTimes === null || metric === null) {
         document.getElementById('metric').innerHTML = 'Only ' + secondsDiff + ' seconds!';
     } else { 
         console.log('More like %s times...', numberOfTimes);
-        let copy = metric['copy'] + ' ' + Math.round(numberOfTimes) + ' ' + 'times!';
+        var copy = metric['copy'] + ' ' + Math.round(numberOfTimes) + ' ' + 'times!';
         document.getElementById('metric').innerHTML = copy;
     }
 }
