@@ -74,9 +74,12 @@ function getMinMetric() {
     return validMetrics[Math.floor(Math.random()*validMetrics.length)];
 }
 
-// just do day diff?
-if (secondsDiff <= 0) {
+// same day
+if (nextDate.toISOString().split('T')[0] === today.toISOString().split('T')[0]) {
     document.getElementById('metric').innerHTML = "OMG! That's TODAY!~";
+// past
+} else if (secondsDiff < 0) {
+    document.getElementById('metric').innerHTML = "Uh oh... time to set a date!";
 } else {
     var metricInfo = getMinMetric();
     var numberOfTimes = metricInfo[0];

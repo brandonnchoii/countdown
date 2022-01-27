@@ -1,12 +1,12 @@
 body { 
-    background: #fff1e6;
+    background: #ffebf2;
     font-family: Arial;
 }
 
 #container { 
     text-align: center;
     padding: 2em 1.5em 2em 1.5em;
-    font-size: 3em;
+    font-size: 3.4em;
 }
 
 #countdown {
