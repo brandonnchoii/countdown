@@ -44,6 +44,7 @@ function createFlowers() {
         "127802", //hawaiaan
         "127800", //pink one
         "127840", //goguma
+        "129400", //disguised face
     ]
     var flower = "&#" + flowers[Math.floor(Math.random()*flowers.length)];
     document.getElementById('flowers').innerHTML = flower.repeat(6) + "<br>" + flower.repeat(6); 
