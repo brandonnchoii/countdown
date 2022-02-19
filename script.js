@@ -34,6 +34,26 @@ var metricOptions = [
         'copy': "Listening to BTS's 'Permission to Dance'",
         'duration_s': '187'
     },
+    // DES
+    {
+        'copy': "Listening to all of Dear Evan Hansen",
+        'duration_s': '3395'
+    },
+    // pottery
+    {
+        'copy': "Walking to pottery",
+        'duration_s': '1920'
+    },
+    // paddington 2
+    {
+        'copy': "Watching Paddington 2",
+        'duration_s': '6240'
+    },
+    // ozone
+    {
+        'copy': "Walking to Ozone",
+        'duration_s': '1320'
+    },
 ];
 
 function createFlowers() {
