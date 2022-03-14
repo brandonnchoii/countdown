@@ -1,6 +1,6 @@
 // TODO: how to plan for next trip if time is negative?
 
-var nextDate = new Date('March 21, 2022');
+var nextDate = new Date('March 22, 2022');
 $("#countdown").html("&#128197 " + nextDate.toISOString().split('T')[0] + " &#128302"); 
 
 var metricOptions = [
@@ -54,6 +54,11 @@ var metricOptions = [
         'copy': "Walking to Ozone",
         'duration_s': '1320'
     },
+    // commute
+    {
+        'copy': "Commuting to work",
+        'duration_s': '1560'
+    }
 ];
 
 function createFlowers() {
@@ -76,7 +81,7 @@ setInterval(() => { createFlowers() }, 3000);
 var today = new Date();
 console.log('Next date: %s', nextDate.toString());
 console.log('Current date: %s', today.toString());
-var secondsDiff = (nextDate.getTime() - today.getTime()) / 1000;
+var secondsDiff = (nextDate - today) / 1000;
 
 function getMinMetric() {
     // only allow whole numbers
@@ -97,11 +102,17 @@ function getMinMetric() {
 
 // same day
 if (nextDate.toISOString().split('T')[0] === today.toISOString().split('T')[0]) {
+    document.getElementById('days').innerHTML = "&#129312";
     document.getElementById('metric').innerHTML = "OMG! That's TODAY!~";
 // past
 } else if (secondsDiff < 0) {
+    document.getElementById('days').innerHTML = "&#128560";
     document.getElementById('metric').innerHTML = "Uh oh... time to set a date!";
 } else {
+    // day countdown
+    var dayDiff = Math.ceil((nextDate - today) / (24 * 60 * 60 * 1000));
+    document.getElementById('days').innerHTML = dayDiff + " more days!";
+
     var metricInfo = getMinMetric();
     var numberOfTimes = metricInfo[0];
     var metric = metricInfo[1];
