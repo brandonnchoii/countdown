@@ -1,6 +1,6 @@
 // TODO: how to plan for next trip if time is negative?
 
-var nextDate = new Date('March 22, 2022');
+var nextDate = new Date('April 20, 2022');
 $("#countdown").html("&#128197 " + nextDate.toISOString().split('T')[0] + " &#128302"); 
 
 var metricOptions = [
