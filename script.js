@@ -1,7 +1,7 @@
 // TODO: how to plan for next trip if time is negative?
 
-var nextDate = new Date('April 20, 2022');
-$("#countdown").html("&#127799 " + nextDate.toISOString().split('T')[0] + " &#128059");
+var nextDate = new Date('July 13, 2022');
+$("#countdown").html("&#127799 " + nextDate.toISOString().split('T')[0] + " &#128558;&#8205;&#128168");
 
 var metricOptions = [
     // paddington
@@ -9,56 +9,56 @@ var metricOptions = [
         'copy': "Watching Paddington",
         'duration_s': '5700'
     },
-    // jbrekkie
-    {
-        'copy': "Listening to Jbrekkie's Jubilee",
-        'duration_s': '2223'
-    },
     // holst
     {
         'copy': "Listening to Holst: The Planets",
         'duration_s': '3122'
-    },
-    // epik high
-    {
-        'copy': "Listening to 'Fly' by Epik High",
-        'duration_s': '201'
     },
     // flight
     {
         'copy': "Flying between JFK and LHR",
         'duration_s': '29700'
     },
-    // BTS 
+    // flight 2
     {
-        'copy': "Listening to BTS's 'Permission to Dance'",
-        'duration_s': '187'
+        'copy': "Flying to Luxembourg and back",
+        'duration_s': '9000'
     },
     // DES
     {
         'copy': "Listening to all of Dear Evan Hansen",
         'duration_s': '3395'
     },
-    // pottery
-    {
-        'copy': "Walking to pottery",
-        'duration_s': '1920'
-    },
     // paddington 2
     {
         'copy': "Watching Paddington 2",
         'duration_s': '6240'
+    },
+    // eeaao
+    {
+        'copy': "Watching Everything Everywhere All at Once",
+        'duration_s': '8400'
+    },
+    // top gun
+    {
+        'copy': "Watching Top Gun",
+        'duration_s': '6600'
+    },
+    // top gun 2
+    {
+        'copy': "Watching Top Gun: Maverick",
+        'duration_s': '7860'
+    },
+    // nandos
+    {
+        'copy': "Walking to Nando's (you know which one)",
+        'duration_s': '840'
     },
     // ozone
     {
         'copy': "Walking to Ozone",
         'duration_s': '1320'
     },
-    // commute
-    {
-        'copy': "Commuting to work",
-        'duration_s': '1560'
-    }
 ];
 
 function createFlowers() {
